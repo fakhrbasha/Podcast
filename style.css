@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+    background-image: url('background\ \(2\).jpeg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    width: 100%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a:visited,
+a:active,
+a:link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(130, 131, 131);
+}
+
+/* Header */
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .link {
+    margin: 5px;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .taggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: rgb(130, 131, 131);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: rgb(0, 0, 0)
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* deopdown*/
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgb(130, 131, 131);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* responsive design*/
+@media (max-width: 992px) {
+
+    .navbar .link,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .taggle_btn {
+        display: block;
+    }
+
+    .dropdown {
+        display: block;
+    }
+}
+
+.podcast {
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.podcast:hover {
+    color: darkgray;
+}
+
+.infopodcast {
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.item {
+    margin: 15px;
+    margin-bottom: 40px;
+    padding: 17px;
+    color: rgb(29, 0, 0);
+    text-align: center;
+    border: 0.5px solid white;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.3;
+
+}
+
+.item:hover {
+    color: brown;
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.50);
+    transition: all .3s;
+}
+
+/*   loading   */
+
+.loadingi {
+    --speed-of-animation: 0.9s;
+    --gap: 6px;
+    --first-color: #4c86f9;
+    --second-color: #49a84c;
+    --third-color: #f6bb02;
+    --fourth-color: #f6bb02;
+    --fifth-color: #2196f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    gap: 6px;
+    height: 100px;
+}
+
+.loadingi span {
+    align-items: center;
+    text-align: center;
+    width: 4px;
+    height: 50px;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loadingi span:nth-child(2) {
+    background: var(--second-color);
+    animation-delay: -0.8s;
+}
+
+.loadingi span:nth-child(3) {
+    background: var(--third-color);
+    animation-delay: -0.7s;
+}
+
+.loadingi span:nth-child(4) {
+    background: var(--fourth-color);
+    animation-delay: -0.6s;
+}
+
+.loadingi span:nth-child(5) {
+    background: var(--fifth-color);
+    animation-delay: -0.5s;
+}
+
+@keyframes scale {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.05);
+    }
+
+    20% {
+        transform: scaleY(1);
+    }
+}
+.qout{
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+    margin-bottom: 40px;
+    padding: 17px;
+    color: rgb(29, 0, 0);
+    border-radius: 10px;
+    opacity: 0.6;
+}
+.qout:hover{
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 50px rgb(255, 255, 255);
+
+}
